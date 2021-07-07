@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_07_143516) do
+ActiveRecord::Schema.define(version: 2021_07_07_170719) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "transactions", force: :cascade do |t|
     t.string "street"
@@ -21,6 +24,11 @@ ActiveRecord::Schema.define(version: 2021_07_07_143516) do
     t.string "baths"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "sale_date"
+    t.integer "price"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "sq_ft"
   end
 
 end

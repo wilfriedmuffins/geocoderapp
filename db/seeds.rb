@@ -10,6 +10,6 @@ require 'csv'
 
 Transaction.destroy_all
 
-CSV.foreach("db/Sacramentorealestatetransactions.csv", headers: true) do |line|
+CSV.foreach("db/Sacramentorealestatetransactions - Feuille 1.csv", headers: true) do |line|
     Transaction.create! line.to_hash.except(*%w{type latitude longitude})
 end
