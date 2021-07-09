@@ -11,3 +11,8 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import "packs/maps"
+import 'packs/gmaps';
+import GMaps from 'packs/gmaps';
+window.GMaps = GMaps;

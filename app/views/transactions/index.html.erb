@@ -1,0 +1,32 @@
+<h1>Transaction list </h1>
+
+<table  >
+    <thead>
+        <tr>
+            <th>street</th>
+            <th>City</th>
+            <th>zip</th>
+            <th>state</th>
+            <th>latitude</th>
+            <th>longitude</th>
+        </tr>
+    </thead>
+    <tbody >
+            <% @transactions.each do |transaction| %>
+                <tr >
+                    <td><%= transaction.street %></td>
+                    <td><%= transaction.city %></td>
+                    <td><%= transaction.zip %></td>
+                    <td><%= transaction.state %></td> 
+                    <td><%= transaction.latitude %></td> 
+                    <td><%= transaction.longitude %></td> 
+                </tr>
+        <% end %> 
+    </tbody>
+</table>
+
+<div class="pagination">
+    <%= paginate @transactions %>
+</div>
+
+  <%= tag.div nil, id: "map" %>

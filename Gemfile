@@ -57,3 +57,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "pg", "~> 1.2"
 
 gem 'geocoder', '~> 1.6', '>= 1.6.7'
+gem 'redis', '~> 4.3', '>= 4.3.1'
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
+gem 'figaro', '~> 1.2'
