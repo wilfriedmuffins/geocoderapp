@@ -29,4 +29,4 @@
     <%= paginate @transactions %>
 </div>
 
-  <%= tag.div nil, id: "map" %>
+  <%= tag.div nil, id: "map", data: { transactions : @transactions.to_json(methods: [:address])} %>
