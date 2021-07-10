@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
 
     def index
-        @transactions = Transaction.page(params[:page]).per(5)
+        @transactions = Transaction.all
     end
 
     def show

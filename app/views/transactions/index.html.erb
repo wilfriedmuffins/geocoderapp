@@ -1,6 +1,6 @@
 <h1>Transaction list </h1>
-
-<table  >
+<div class="container">
+    <table>
     <thead>
         <tr>
             <th>street</th>
@@ -24,9 +24,14 @@
         <% end %> 
     </tbody>
 </table>
-
-<div class="pagination">
-    <%= paginate @transactions %>
 </div>
 
-  <%= tag.div nil, id: "map", data: { transactions : @transactions.to_json(methods: [:address])} %>
+<%
+=begin%>
+ <div class="pagination">
+    <%= paginate @transactions %>
+</div> 
+<%
+=end%>
+
+<%= tag.div class:"container", id: "map", data: { transactions: @transactions.to_json} %> 
